@@ -94,12 +94,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         playingCard = undefined; // On reset `playingCard`
       } else {
-        // Au 1e click on défini notre `playingCard` comme la 1e carte cliquée
+        // Au 1er click on défini notre `playingCard` comme la 1e carte cliquée
         playingCard = divCard;
       }
     
-      if (memoryGame.isFinished()) {
-        alert('You win!');
+      if (memoryGame.isFinished() && timeLeft > 0) {
+        let firstname = prompt(`Tu as gagné en ${timeWin} secondes ! Comment t'appelles-tu ? `);
+        clearInterval(timer); // on arrête le chrono
+        console.log(firstname);
       }
     };
   });

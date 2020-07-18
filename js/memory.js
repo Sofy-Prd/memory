@@ -23,7 +23,7 @@ class MemoryGame {
     return false;
   }
 
-  //Pour gagner, le nombre de paires trouvé doit être égal au nombre de paires présentées
+  //Pour gagner, le nombre de paires trouvées doit être égal au nombre de paires présentées
   isFinished() {
     return this.pairsGuessed >= (this.cards.length /2);
   }

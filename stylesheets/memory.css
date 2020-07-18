@@ -67,3 +67,27 @@ p {
   font-size: 20px;
   text-align: center;
 }
+
+.progressbar {
+  width: 80%;
+  margin: 25px auto;
+  border: solid 1px #000;
+}
+.progressbar .inner {
+  height: 15px;
+  animation: progressbar-countdown;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  animation-timing-function: linear;
+}
+@keyframes progressbar-countdown {
+  0% {
+    width: 0%;
+    background: #0F0;
+  }
+  100% {
+    width: 100%;
+    background: #F00;
+  }
+}
