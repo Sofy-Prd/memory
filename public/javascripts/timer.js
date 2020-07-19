@@ -13,7 +13,7 @@ timer = setInterval(function(){
     {
         alert('Tu as perdu, le temps est écoulé ! Essaie encore, la prochaine fois sera sûrement la bonne 😀 Bonne chance 🍀 !');
         clearInterval(timer);
-        // window.location.href = '/';//On retourne sur la page d'accueil
+        window.location.href = '/';//On retourne sur la page d'accueil
        
     }
 }, 1000);

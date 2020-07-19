@@ -1,48 +1,48 @@
 #homepage {
 
-    $base-color:#01C3A8;
-
+    $green-color: #0ac3a7;
+    $greenDark-color:#0CA289;
+    $creme-color:#f9f7d0;
+    
+    //animation qui fait clignoter
     @keyframes clignote {
         0%{opacity: 1;}
         50%{opacity: 0;}
         100%{opacity: 1;}
       }
     
-
     text-align: center;
 
     h1 {
-        font-size: 4em;
+        font-size: 3.5em;
+        margin-bottom:0;
     }
 
     h2 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     h3 {
-        font-size: 1.5em;
+        font-size: 1.2em;
         animation:clignote 1s infinite;
     }
+
     li {
         list-style: none;
     }
 
     span {
-       color:$base-color;
+       color:$creme-color;
        font-weight: bold;
-       font-size:1.2em;
+       font-size:1.1em;
     }
 
     a {
         text-decoration:inherit; color:inherit;
         display:inline-block;
         margin-top:1vh;
-        background:$base-color; 
-        color:white;
+        background:$creme-color; 
+        color:black;
         padding:1em; border-radius:.5em;
-        animation:clignote 1s infinite;
-    }
-
-    
-   
+     }
 }

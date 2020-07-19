@@ -1,3 +1,21 @@
+* :before, after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #0ac3a7; }
+
+img {
+  max-width: 100%; }
+
+html {
+  font-family: "Poppins", Arial, sans-serif; }
+
+h1 {
+  color: #f9f7d0;
+  font-weight: bolder;
+  text-align: center; }
+
 #homepage {
   text-align: center; }
 
@@ -9,33 +27,33 @@
   100% {
     opacity: 1; } }
   #homepage h1 {
-    font-size: 4em; }
+    font-size: 3.5em;
+    margin-bottom: 0; }
   #homepage h2 {
-    font-size: 2em; }
+    font-size: 1.5em; }
   #homepage h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     animation: clignote 1s infinite; }
   #homepage li {
     list-style: none; }
   #homepage span {
-    color: #01C3A8;
+    color: #f9f7d0;
     font-weight: bold;
-    font-size: 1.2em; }
+    font-size: 1.1em; }
   #homepage a {
     text-decoration: inherit;
     color: inherit;
     display: inline-block;
     margin-top: 1vh;
-    background: #01C3A8;
-    color: white;
+    background: #f9f7d0;
+    color: black;
     padding: 1em;
-    border-radius: .5em;
-    animation: clignote 1s infinite; }
+    border-radius: .5em; }
 
 #memoryGame #memory_board {
   display: flex;
   flex-wrap: wrap;
-  background: #b8e0da;
+  background: #0CA289;
   width: 63vw;
   height: 60vh;
   padding: 1vw;
@@ -64,33 +82,14 @@
   text-align: center;
   font-weight: bolder;
   font-size: 1.2em;
-  text-align: center; }
-
-* :before, after {
-  box-sizing: border-box; }
-
-body {
-  margin: 0;
-  background-color: #f9f7d0; }
-
-img {
-  max-width: 100%; }
-
-html {
-  font-family: "Roboto", Arial, sans-serif; }
-
-h1 {
-  color: #01C3A8;
-  font-weight: bolder;
   text-align: center;
-  text-shadow: 0px 0px 20px #969696; }
+  color: #f9f7d0; }
 
-.progressbar {
+#memoryGame .progressbar {
   width: 65vw;
-  margin: 2vh auto;
-  border: solid 1px #000; }
+  margin: 2vh auto; }
 
-.progressbar .inner {
+#memoryGame .progressbar .inner {
   height: 15px;
   animation: progressbar-countdown;
   animation-iteration-count: 1;
@@ -101,9 +100,12 @@ h1 {
 @keyframes progressbar-countdown {
   0% {
     width: 0%;
-    background: #01C3A8; }
+    background: #f9f7d0; }
+  50% {
+    width: 50%;
+    background: orange; }
   100% {
     width: 100%;
-    background: black; } }
+    background: red; } }
 
 /*# sourceMappingURL=style.css.map */
