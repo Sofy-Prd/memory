@@ -3,30 +3,30 @@ const cards = [
   { name: 'banane',    img: 'banane.jpg' },
   { name: 'orange',    img: 'orange.jpg' },
   { name: 'citron_vert',    img: 'citron_vert.jpg' },
-  // { name: 'grenade',    img: 'grenade.jpg' },
-  // { name: 'abricot',    img: 'abricot.jpg' },
-  // { name: 'citron',    img: 'citron.jpg' },
-  // { name: 'fraise',    img: 'fraise.jpg' },
-  // { name: 'pomme_verte',    img: 'pomme_verte.jpg' },
-  // { name: 'peche',   img: 'peche.jpg' },
-  // { name: 'raisin',   img: 'raisin.jpg' },
-  // { name: 'pasteque',   img: 'pasteque.jpg' },
-  // { name: 'prune',   img: 'prune.jpg' },
-  // { name: 'poire',   img: 'poire.jpg' },
+  { name: 'grenade',    img: 'grenade.jpg' },
+  { name: 'abricot',    img: 'abricot.jpg' },
+  { name: 'citron',    img: 'citron.jpg' },
+  { name: 'fraise',    img: 'fraise.jpg' },
+  { name: 'pomme_verte',    img: 'pomme_verte.jpg' },
+  { name: 'peche',   img: 'peche.jpg' },
+  { name: 'raisin',   img: 'raisin.jpg' },
+  { name: 'pasteque',   img: 'pasteque.jpg' },
+  { name: 'prune',   img: 'prune.jpg' },
+  { name: 'poire',   img: 'poire.jpg' },
   { name: 'pomme_rouge',    img: 'pomme_rouge.jpg' },
   { name: 'banane',    img: 'banane.jpg' },
   { name: 'orange',    img: 'orange.jpg' },
-  { name: 'citron_vert',    img: 'citron_vert.jpg' }
-  // { name: 'grenade',    img: 'grenade.jpg' },
-  // { name: 'abricot',    img: 'abricot.jpg' },
-  // { name: 'citron',    img: 'citron.jpg' },
-  // { name: 'fraise',    img: 'fraise.jpg' },
-  // { name: 'pomme_verte',    img: 'pomme_verte.jpg' },
-  // { name: 'peche',   img: 'peche.jpg' },
-  // { name: 'raisin',   img: 'raisin.jpg' },
-  // { name: 'pasteque',   img: 'pasteque.jpg' },
-  // { name: 'prune',   img: 'prune.jpg' },
-  // { name: 'poire',   img: 'poire.jpg' }
+  { name: 'citron_vert',    img: 'citron_vert.jpg' },
+  { name: 'grenade',    img: 'grenade.jpg' },
+  { name: 'abricot',    img: 'abricot.jpg' },
+  { name: 'citron',    img: 'citron.jpg' },
+  { name: 'fraise',    img: 'fraise.jpg' },
+  { name: 'pomme_verte',    img: 'pomme_verte.jpg' },
+  { name: 'peche',   img: 'peche.jpg' },
+  { name: 'raisin',   img: 'raisin.jpg' },
+  { name: 'pasteque',   img: 'pasteque.jpg' },
+  { name: 'prune',   img: 'prune.jpg' },
+  { name: 'poire',   img: 'poire.jpg' },
 
 ];
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   memoryGame.cards.forEach(pic => {
     html += `<div class="card" data-card-name="${pic.name}">`;
     html += `  <div class="back" name="${pic.img}"></div>`;
-    html += `  <div class="front" style="background: url(images/${pic.img}) no-repeat"></div>`;
+    html += `  <div class="front" style="background: center url(images/${pic.img}) no-repeat"></div>`;
     html += `</div>`;
   });
 
@@ -69,8 +69,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   document.querySelectorAll('.back').forEach(divCard => {
     //quand on clique
     divCard.onclick = function() {
-      console.log('Card clicked: ', divCard);
-
       //montre la face cachée de la carte
       showCard(divCard);
 
@@ -80,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
       //au 2e click `playingCard` correspond la 1e carte cliquée
         // on compare donc le nom de la 2e carte au nom de la 1e qui est `playingCard`
         if (memoryGame.checkIfPair(cardName(divCard), cardName(playingCard))) {
-          console.log('yes!');
+          // console.log('yes!');
         } else {
-          console.log('no!');
+          // console.log('no!');
           
           // Si les cartes ne correspondent pas, on retourne les cartes au bout de 0.5s
           let playingCardCopy = playingCard; // on fait une copie parce que "playingCard" est sur le point d'être redefinie à undefined 
@@ -99,11 +97,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
       }
     
       if (memoryGame.isFinished() && timeLeft > 0) {
-        let firstname = prompt(`Tu as gagné en ${timeWin} secondes ! Comment t'appelles-tu ? `);
+        let firstname = prompt(`Bravo 👏 Tu as gagné 🏆 en ${timeWin} secondes  ! Comment t'appelles-tu ? `);
         clearInterval(timer); // on arrête le chrono
         console.log(firstname);
-        
-       
+        //On fait une requete ajax à l'aide d'axios inclu grâce à la balise script dans la page memory.hbs
+        axios.post('http://localhost:3000/memory',{ firstname, timeWin })
+        .then(response => {
+           window.location.href = '/';//On retourne sur la page d'accueil
+        })
+        .catch(err => {
+            console.log("Error while uploading the file: ", err);
+        });
       }
     };
   });

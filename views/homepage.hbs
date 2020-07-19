@@ -1,12 +1,32 @@
-<h1>Bienvenue !</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenue au Memory O'Clock</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="homepage">
+        <h1>Bienvenue au Memory O'Clock !</h1>
 
-<ul>
-  {{#each allScores}}
-  <li>
-    <p>{{firstname}} {{timeWin}}</p>
-  </li>
-  {{/each}}
-</ul>
+        <h2>Classement des 10 premiers Joueurs</h2>
+        <h3>Entraine toi pour en faire partie !!!</h3>
+
+        <ul>
+        {{#each allScores}}
+        <li>
+            <p><span>{{firstname}}</span> a terminé la partie en <span>{{timeWin}}</span> secondes </p>
+        </li>
+        {{/each}}
+        </ul>
 
 
-<a href="/memory">Jouer au memory</a>
+        <a href="/memory">Jouer au memory</a>
+    </div>
+</body>
+</html>
+
+
+

@@ -1,4 +1,4 @@
-let timeLeft = 20;
+let timeLeft = 90;
 let timeWin = 0
 
 //Chronometre
@@ -7,12 +7,13 @@ timer = setInterval(function(){
     {
         --timeLeft; // décrémente le compteur
         ++timeWin; // augmente le compteur
-        document.getElementById("chrono").innerHTML = "il vous reste " + timeLeft + " secondes pour terminer le jeu" ;
+        document.getElementById("chrono").innerHTML = "il te reste " + timeLeft + " secondes pour terminer le jeu. Courage tu vas y arriver 💪 " ;
     }
     else
     {
-        alert('Tu as perdu, le temps est écoulé ! Essaie encore, la prochaine fois sera sûrement la bonne 😀');
+        alert('Tu as perdu, le temps est écoulé ! Essaie encore, la prochaine fois sera sûrement la bonne 😀 Bonne chance 🍀 !');
         clearInterval(timer);
+        // window.location.href = '/';//On retourne sur la page d'accueil
        
     }
 }, 1000);
@@ -40,5 +41,5 @@ function createProgressbar(id, duration) {
   }
   
   addEventListener('load', function() {
-    createProgressbar('progressbar1', '20s');
+    createProgressbar('progressbar1', '90s');
   });

@@ -1,0 +1,48 @@
+#homepage {
+
+    $base-color:#01C3A8;
+
+    @keyframes clignote {
+        0%{opacity: 1;}
+        50%{opacity: 0;}
+        100%{opacity: 1;}
+      }
+    
+
+    text-align: center;
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        animation:clignote 1s infinite;
+    }
+    li {
+        list-style: none;
+    }
+
+    span {
+       color:$base-color;
+       font-weight: bold;
+       font-size:1.2em;
+    }
+
+    a {
+        text-decoration:inherit; color:inherit;
+        display:inline-block;
+        margin-top:1vh;
+        background:$base-color; 
+        color:white;
+        padding:1em; border-radius:.5em;
+        animation:clignote 1s infinite;
+    }
+
+    
+   
+}

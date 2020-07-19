@@ -2,24 +2,22 @@
 <html>
     <head>
        <title>Memory_Oclock</title>
-       <link rel="stylesheet" href="stylesheets/memory.css">
+       <link rel="stylesheet" href="stylesheets/style.css">
       
       </head>
-    <body>
-        <div>
+      <body>
+        <div id="memoryGame">
           <h1>Jeu de mémoire</h1>
-        </div>
-        <div id="memory_board"></div>
-        <div id='progressbar1'></div>
-        <div id="chrono">...</div>
-
-        
+      
+          <div id="memory_board"></div>
+          <div id='progressbar1'></div>
+          <p id="chrono">...</p>
        
 
-
-       <script src="javascripts/memory.js"></script>
-       <script src="javascripts/main.js"></script>
-       <script src="javascripts/timer.js"></script>
-
-    </body>
+          <script src="javascripts/memory.js"></script>
+          <script src="javascripts/main.js"></script>
+          <script src="javascripts/timer.js"></script>
+          <script src="https://unpkg.com/axios@0.2.1/dist/axios.js"></script>
+        </div>
+      </body>
 </html>

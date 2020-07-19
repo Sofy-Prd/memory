@@ -3,7 +3,7 @@ const Schema   = mongoose.Schema;
 
 const scoreSchema = new Schema({
   firstname: String,
-  timeWin: String,
+  timeWin: Number,
   
 }, {
   timestamps: {

@@ -1,0 +1,109 @@
+#homepage {
+  text-align: center; }
+
+@keyframes clignote {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  #homepage h1 {
+    font-size: 4em; }
+  #homepage h2 {
+    font-size: 2em; }
+  #homepage h3 {
+    font-size: 1.5em;
+    animation: clignote 1s infinite; }
+  #homepage li {
+    list-style: none; }
+  #homepage span {
+    color: #01C3A8;
+    font-weight: bold;
+    font-size: 1.2em; }
+  #homepage a {
+    text-decoration: inherit;
+    color: inherit;
+    display: inline-block;
+    margin-top: 1vh;
+    background: #01C3A8;
+    color: white;
+    padding: 1em;
+    border-radius: .5em;
+    animation: clignote 1s infinite; }
+
+#memoryGame #memory_board {
+  display: flex;
+  flex-wrap: wrap;
+  background: #b8e0da;
+  width: 63vw;
+  height: 60vh;
+  padding: 1vw;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 20px -6px #615961; }
+
+#memoryGame .card .back {
+  background: url("/images/logo_oclock.jpg") no-repeat center;
+  width: 6vw;
+  height: 8vh;
+  margin: 0.5vw;
+  padding: 1vw; }
+
+#memoryGame .card .front.blocked,
+#memoryGame .card .back.blocked {
+  pointer-events: none; }
+
+#memoryGame h1 {
+  font-size: 3em; }
+
+#memoryGame p {
+  display: block;
+  width: 65vh;
+  margin: 1vh auto;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.2em;
+  text-align: center; }
+
+* :before, after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #f9f7d0; }
+
+img {
+  max-width: 100%; }
+
+html {
+  font-family: "Roboto", Arial, sans-serif; }
+
+h1 {
+  color: #01C3A8;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 0px 0px 20px #969696; }
+
+.progressbar {
+  width: 65vw;
+  margin: 2vh auto;
+  border: solid 1px #000; }
+
+.progressbar .inner {
+  height: 15px;
+  animation: progressbar-countdown;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+  animation-timing-function: linear; }
+
+@keyframes progressbar-countdown {
+  0% {
+    width: 0%;
+    background: #01C3A8; }
+  100% {
+    width: 100%;
+    background: black; } }
+
+/*# sourceMappingURL=style.css.map */
