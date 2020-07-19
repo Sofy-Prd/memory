@@ -11,8 +11,9 @@ timer = setInterval(function(){
     }
     else
     {
-        alert('Tu as perdu, le temps est écoulé !');
+        alert('Tu as perdu, le temps est écoulé ! Essaie encore, la prochaine fois sera sûrement la bonne 😀');
         clearInterval(timer);
+       
     }
 }, 1000);
 

@@ -1,32 +1,32 @@
 const cards = [
-  { name: '1',    img: '1.jpg' },
-  { name: '2',    img: '2.jpg' },
-  { name: '3',    img: '3.jpg' },
-  { name: '4',    img: '4.jpg' },
-  // { name: '5',    img: '5.jpg' },
-  // { name: '6',    img: '6.jpg' },
-  // { name: '7',    img: '7.jpg' },
-  // { name: '8',    img: '8.jpg' },
-  // { name: '9',    img: '9.jpg' },
-  // { name: '10',   img: '10.jpg' },
-  // { name: '11',   img: '11.jpg' },
-  // { name: '12',   img: '12.jpg' },
-  // { name: '13',   img: '13.jpg' },
-  // { name: '14',   img: '14.jpg' },
-  { name: '1',    img: '1.jpg' },
-  { name: '2',    img: '2.jpg' },
-  { name: '3',    img: '3.jpg' },
-  { name: '4',    img: '4.jpg' }
-  // { name: '5',    img: '5.jpg' },
-  // { name: '6',    img: '6.jpg' },
-  // { name: '7',    img: '7.jpg' },
-  // { name: '8',    img: '8.jpg' },
-  // { name: '9',    img: '9.jpg' },
-  // { name: '10',   img: '10.jpg' },
-  // { name: '11',   img: '11.jpg' },
-  // { name: '12',   img: '12.jpg' },
-  // { name: '13',   img: '13.jpg' },
-  // { name: '14',   img: '14.jpg' }
+  { name: 'pomme_rouge',    img: 'pomme_rouge.jpg' },
+  { name: 'banane',    img: 'banane.jpg' },
+  { name: 'orange',    img: 'orange.jpg' },
+  { name: 'citron_vert',    img: 'citron_vert.jpg' },
+  // { name: 'grenade',    img: 'grenade.jpg' },
+  // { name: 'abricot',    img: 'abricot.jpg' },
+  // { name: 'citron',    img: 'citron.jpg' },
+  // { name: 'fraise',    img: 'fraise.jpg' },
+  // { name: 'pomme_verte',    img: 'pomme_verte.jpg' },
+  // { name: 'peche',   img: 'peche.jpg' },
+  // { name: 'raisin',   img: 'raisin.jpg' },
+  // { name: 'pasteque',   img: 'pasteque.jpg' },
+  // { name: 'prune',   img: 'prune.jpg' },
+  // { name: 'poire',   img: 'poire.jpg' },
+  { name: 'pomme_rouge',    img: 'pomme_rouge.jpg' },
+  { name: 'banane',    img: 'banane.jpg' },
+  { name: 'orange',    img: 'orange.jpg' },
+  { name: 'citron_vert',    img: 'citron_vert.jpg' }
+  // { name: 'grenade',    img: 'grenade.jpg' },
+  // { name: 'abricot',    img: 'abricot.jpg' },
+  // { name: 'citron',    img: 'citron.jpg' },
+  // { name: 'fraise',    img: 'fraise.jpg' },
+  // { name: 'pomme_verte',    img: 'pomme_verte.jpg' },
+  // { name: 'peche',   img: 'peche.jpg' },
+  // { name: 'raisin',   img: 'raisin.jpg' },
+  // { name: 'pasteque',   img: 'pasteque.jpg' },
+  // { name: 'prune',   img: 'prune.jpg' },
+  // { name: 'poire',   img: 'poire.jpg' }
 
 ];
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   memoryGame.cards.forEach(pic => {
     html += `<div class="card" data-card-name="${pic.name}">`;
     html += `  <div class="back" name="${pic.img}"></div>`;
-    html += `  <div class="front" style="background: url(img/${pic.img}) no-repeat"></div>`;
+    html += `  <div class="front" style="background: url(images/${pic.img}) no-repeat"></div>`;
     html += `</div>`;
   });
 
@@ -102,6 +102,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let firstname = prompt(`Tu as gagné en ${timeWin} secondes ! Comment t'appelles-tu ? `);
         clearInterval(timer); // on arrête le chrono
         console.log(firstname);
+        
+       
       }
     };
   });
