@@ -9,7 +9,7 @@ const favicon      = require('serve-favicon');//utilitaire pour ajouter un favic
 
 
 mongoose
-  .connect('mongodb://localhost/memory', {useNewUrlParser: true})
+  .connect(process.env.MONGODB_URI, {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })

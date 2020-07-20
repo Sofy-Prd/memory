@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         clearInterval(timer); // on arrête le chrono
         console.log(firstname);
         //On fait une requete ajax à l'aide d'axios inclu grâce à la balise script dans la page memory.hbs
-        axios.post('http://localhost:3000/memory',{ firstname, timeWin })
+        axios.post('/memory',{ firstname, timeWin })
         .then(response => {
            window.location.href = '/';//On retourne sur la page d'accueil
         })
