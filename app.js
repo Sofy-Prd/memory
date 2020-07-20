@@ -1,11 +1,11 @@
 require('dotenv').config();
 
-const bodyParser   = require('body-parser');
 const express      = require('express');
-const favicon      = require('serve-favicon');
-const hbs          = require('hbs');
-const mongoose     = require('mongoose');
-const path         = require('path');
+const bodyParser   = require('body-parser'); //permet de gerer les données postées
+const hbs          = require('hbs');//handlebars - moteur de template
+const mongoose     = require('mongoose');//sert de passerelle entre le serveur Node et MongoDB en utilisant des Schemas
+const path         = require('path');//utilitaire pour accéder et interragir avec le syteme de fichiers
+const favicon      = require('serve-favicon');//utilitaire pour ajouter un favicon au site
 
 
 mongoose

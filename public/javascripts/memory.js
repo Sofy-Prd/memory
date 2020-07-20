@@ -1,25 +1,25 @@
+//Le jeu et sa logique
+
 class MemoryGame {
   constructor(cards){
     this.cards = cards;
-    this.pickedCards = [];
-    this.pairsGuessed = 0;
-
+    this.pickedCards = [];//correspond aux cartes sur lesquelles on a cliqué
+    this.pairsGuessed = 0;//nombre de paires trouvées
     this.shuffleCards();
   }
 
-  //on tri les carte aléatoirement
+  //on mélange les cartes aléatoirement
   shuffleCards() {
     this.cards.sort(function (a, b) {
       return Math.random() - 0.5;
     });
   }
-  //On verifie si les cartes sont identiques
+  //Si les cartes sont identiques, on incremente le nombre de paires trouvées
   checkIfPair(card1, card2) {
    if (card1 === card2) {
       this.pairsGuessed++;
       return true;
     }
-
     return false;
   }
 

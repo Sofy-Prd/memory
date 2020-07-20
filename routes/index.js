@@ -4,7 +4,7 @@ const router  = express.Router();
 const Score = require('../models/Score.js');
 
 
-//GET home page
+//GET homepage
 router.get('/', (req, res, next) => {
   //on recupère la liste des scores
   Score.find()

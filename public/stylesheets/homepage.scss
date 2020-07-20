@@ -1,15 +1,8 @@
 #homepage {
-
+    //on crée les variables pour les couleurs
     $green-color: #0ac3a7;
     $greenDark-color:#0CA289;
     $creme-color:#f9f7d0;
-    
-    //animation qui fait clignoter
-    @keyframes clignote {
-        0%{opacity: 1;}
-        50%{opacity: 0;}
-        100%{opacity: 1;}
-      }
     
     text-align: center;
 
@@ -45,4 +38,12 @@
         color:black;
         padding:1em; border-radius:.5em;
      }
+
+    //animation qui fait clignoter
+    @keyframes clignote {
+        0%{opacity: 1;}
+        50%{opacity: 0;}
+        100%{opacity: 1;}
+      }
+    
 }

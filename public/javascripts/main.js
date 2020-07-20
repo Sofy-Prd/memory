@@ -1,3 +1,5 @@
+//
+
 const cards = [
   { name: 'pomme_rouge',    img: 'pomme_rouge.jpg' },
   { name: 'banane',    img: 'banane.jpg' },
@@ -33,7 +35,7 @@ const cards = [
 //On crée un nouveau jeu avec les cartes ci-dessus
 const memoryGame = new MemoryGame(cards);
 
-//Pour ce nouveau jeu, on crée le contenu html de chaque div card avec une div back visible et une div front non-visible
+//Pour ce nouveau jeu, d"s que la page se charge on crée le contenu html de chaque div card avec une div back visible et une div front non-visible
 document.addEventListener("DOMContentLoaded", function(event) { 
   let html = '';
   memoryGame.cards.forEach(pic => {
@@ -69,20 +71,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
   document.querySelectorAll('.back').forEach(divCard => {
     //quand on clique
     divCard.onclick = function() {
-      //montre la face cachée de la carte
+      //on bascule la class en front --> montre la face cachée de la carte
       showCard(divCard);
-
      
       if (playingCard) {
       //si 1e click, pas de verif car `playingCard` est undefined, on passe au else
       //au 2e click `playingCard` correspond la 1e carte cliquée
-        // on compare donc le nom de la 2e carte au nom de la 1e qui est `playingCard`
+        // on compare donc le nom de la 2e carte au nom de la 1ere qui est `playingCard`
         if (memoryGame.checkIfPair(cardName(divCard), cardName(playingCard))) {
-          // console.log('yes!');
+          // i ce sont les mêmes on les laisse face visible
         } else {
-          // console.log('no!');
-          
-          // Si les cartes ne correspondent pas, on retourne les cartes au bout de 0.5s
+          // Si les cartes ne correspondent pas, on bascule les classes des deux carte en back  au bout de 0.5s --> retourne les cartes
           let playingCardCopy = playingCard; // on fait une copie parce que "playingCard" est sur le point d'être redefinie à undefined 
           setTimeout(function () {
             hideCard(playingCardCopy);
@@ -91,11 +90,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
 
         playingCard = undefined; // On reset `playingCard`
+
       } else {
-        // Au 1er click on défini notre `playingCard` comme la 1e carte cliquée
+        // Au 1er click on défini notre `playingCard` comme la 1ere carte cliquée
         playingCard = divCard;
       }
     
+      // si toutes les paires ont été trouvées dans le temps imparti
       if (memoryGame.isFinished() && timeLeft > 0) {
         let firstname = prompt(`Bravo 👏 Tu as gagné 🏆 en ${timeWin} secondes  ! Comment t'appelles-tu ? `);
         clearInterval(timer); // on arrête le chrono
