@@ -1,10 +1,5 @@
+//style de la vue homepage
 #homepage {
-    //on crée les variables pour les couleurs
-    $green-color: #0ac3a7;
-    $greenDark-color:#0CA289;
-    $creme-color:#f9f7d0;
-    
-    text-align: center;
 
     h1 {
         font-size: 3.5em;
@@ -20,14 +15,30 @@
         animation:clignote 1s infinite;
     }
 
+    li:nth-child(1){
+        background-image:url(../images/medal_1.png);
+    }
+    li:nth-child(2){
+        background-image:url(../images/medal_2.png);
+    }
+    li:nth-child(3){
+        background-image:url(../images/medal_3.png);
+    }
+    
     li {
         list-style: none;
-    }
+        width: 32vw;
+        margin:1em auto;
+        background-size: 1.5em;
+        background-repeat:no-repeat;
+        background-position-x: 2em;
+        background-position-y: center;
 
-    span {
-       color:$creme-color;
-       font-weight: bold;
-       font-size:1.1em;
+        span {
+            color:$creme-color;
+            font-weight: bold;
+            font-size:1.1em;
+         }
     }
 
     a {

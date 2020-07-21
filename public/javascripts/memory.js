@@ -1,4 +1,4 @@
-//Le jeu et sa logique
+//La classe du jeu Memory avec son constructor et ses methodes
 
 class MemoryGame {
   constructor(cards){

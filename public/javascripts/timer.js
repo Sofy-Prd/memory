@@ -7,25 +7,25 @@ timer = setInterval(function(){
     {
         --timeLeft; // décrémente le compteur
         ++timeWin; // augmente le compteur
-        document.getElementById("chrono").innerHTML = "il te reste " + timeLeft + " secondes pour terminer le jeu. Courage tu vas y arriver 💪 " ;
+        document.getElementById("chrono").innerHTML = "il te reste <span>" + timeLeft + " </span> secondes pour terminer le jeu. Courage tu vas y arriver 💪 " ;
     }
     else
     {
         alert('Tu as perdu, le temps est écoulé ! Essaie encore, la prochaine fois sera sûrement la bonne 😀 Bonne chance 🍀 !');
-        clearInterval(timer);
+        clearInterval(timer);//On arrete le chrono
         window.location.href = '/';//On retourne sur la page d'accueil
        
     }
 }, 1000);
 
 
-//Barre de progression
+//Fonction qui crée une barre de progression en fonction des arguments
 function createProgressbar(id, duration) {
     // on selectionne la div que l'on veut transformer en barre de progression
     let progressbar = document.getElementById(id);
     progressbar.className = 'progressbar';
   
-    // on crée la div qui va changer de largeur en fonction du temps écoulé
+    // on crée la div qui va changer de largeur grace à une animation css en fonction du temps écoulé
     let progressbarinner = document.createElement('div');
     progressbarinner.className = 'inner';
   
@@ -40,6 +40,7 @@ function createProgressbar(id, duration) {
     progressbarinner.style.animationPlayState = 'running';
   }
   
+  //au chargement de la page, une basse de progression est créée avec les arguments souhaités
   addEventListener('load', function() {
     createProgressbar('progressbar1', '90s');
   });

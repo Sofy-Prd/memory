@@ -1,3 +1,5 @@
+//ici on ecrit tout ce qui est commun a toutes les pages du site
+
 // on declare les variables des couleurs du site
 $green-color: #0ac3a7;
 $greenDark-color:#0CA289;
@@ -12,6 +14,7 @@ $creme-color:#f9f7d0;
 body {
 margin:0; //on supprime la marge par defaut des navigateurs
 background-color: $green-color;
+text-align: center;
 }
 
 //les images ne seront pas plus grandes que la page
@@ -25,8 +28,12 @@ h1 {
 color: $creme-color;
 font-weight: bolder;
 text-align: center;
+span {
+  color:red;
+}
 }
 
+// on importe ici les fichiers de styles sprecifiques à chaque page
 @import "./homepage.scss";
 @import "./memory.scss";
  

@@ -1,4 +1,4 @@
- 
+ //style de la vue memory
  #memoryGame{
   #memory_board {
     display:flex;
@@ -19,6 +19,7 @@
       margin:0.5vw;
       padding:1vw;
   }
+  //qd les cartes ont une classe blocked, on bloque la possibilité de cliquer dessus
   .card .front.blocked,
   .card .back.blocked {
     pointer-events: none;
@@ -67,12 +68,11 @@
       background:red;
     }
   }
+
+  #chrono {
+    span {
+      color:red;
+    }
+  }
   
 }
-
-
-  
-
-  
- 
-  

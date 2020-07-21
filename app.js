@@ -9,15 +9,15 @@ const favicon      = require('serve-favicon');//utilitaire pour ajouter un favic
 
 
 mongoose
-  .connect(process.env.MONGODB_URI, {useNewUrlParser: true})
+//on utilise une variable pour se connecter à la base de données, et l'on modifiera la valeur de cette variable en fonction de l'environnement
+//mongodb://localhost/memoryen local, mongodb://mongo/memory en docker par exemple
+  .connect(process.env.MONGODB_URI, {useNewUrlParser: true}) 
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
   .catch(err => {
     console.error('Error connecting to mongo', err)
   });
-
-const app_name = require('./package.json').name;
 
 const app = express();
 

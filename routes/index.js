@@ -6,7 +6,7 @@ const Score = require('../models/Score.js');
 
 //GET homepage
 router.get('/', (req, res, next) => {
-  //on recupère la liste des scores
+  //on recupère la liste des scores 
   Score.find()
   .sort({timeWin:1})  //on les tri par ordre croissant
   .limit(10)  //on recupère que les 10 premiers

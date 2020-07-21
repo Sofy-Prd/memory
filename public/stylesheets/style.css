@@ -3,7 +3,8 @@
 
 body {
   margin: 0;
-  background-color: #0ac3a7; }
+  background-color: #0ac3a7;
+  text-align: center; }
 
 img {
   max-width: 100%; }
@@ -15,32 +16,51 @@ h1 {
   color: #f9f7d0;
   font-weight: bolder;
   text-align: center; }
+  h1 span {
+    color: red; }
 
-#homepage {
-  text-align: center; }
-  #homepage h1 {
-    font-size: 3.5em;
-    margin-bottom: 0; }
-  #homepage h2 {
-    font-size: 1.5em; }
-  #homepage h3 {
-    font-size: 1.2em;
-    animation: clignote 1s infinite; }
-  #homepage li {
-    list-style: none; }
-  #homepage span {
+#homepage h1 {
+  font-size: 3.5em;
+  margin-bottom: 0; }
+
+#homepage h2 {
+  font-size: 1.5em; }
+
+#homepage h3 {
+  font-size: 1.2em;
+  animation: clignote 1s infinite; }
+
+#homepage li:nth-child(1) {
+  background-image: url(../images/medal_1.png); }
+
+#homepage li:nth-child(2) {
+  background-image: url(../images/medal_2.png); }
+
+#homepage li:nth-child(3) {
+  background-image: url(../images/medal_3.png); }
+
+#homepage li {
+  list-style: none;
+  width: 32vw;
+  margin: 1em auto;
+  background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-position-x: 2em;
+  background-position-y: center; }
+  #homepage li span {
     color: #f9f7d0;
     font-weight: bold;
     font-size: 1.1em; }
-  #homepage a {
-    text-decoration: inherit;
-    color: inherit;
-    display: inline-block;
-    margin-top: 1vh;
-    background: #f9f7d0;
-    color: black;
-    padding: 1em;
-    border-radius: .5em; }
+
+#homepage a {
+  text-decoration: inherit;
+  color: inherit;
+  display: inline-block;
+  margin-top: 1vh;
+  background: #f9f7d0;
+  color: black;
+  padding: 1em;
+  border-radius: .5em; }
 
 @keyframes clignote {
   0% {
@@ -107,5 +127,8 @@ h1 {
   100% {
     width: 100%;
     background: red; } }
+
+#memoryGame #chrono span {
+  color: red; }
 
 /*# sourceMappingURL=style.css.map */
