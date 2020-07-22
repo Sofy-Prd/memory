@@ -10,12 +10,13 @@ une nouvelle paire de cartes.
 - Un compteur de temps, avec une barre de progression, s’affiche en dessous du
 plateau.
 - Le joueur gagne s'il arrive à découvrir toutes les paires avant la fin du temps imparti (90 secondes).
-- Chaque temps de partie effectuée est sauvegardé en base de données.Avant le début du jeu, les 10 meilleurs temps s’affichent à l’écran.
+- Chaque temps de partie effectuée est sauvegardé en base de données.  
+Avant le début du jeu, les 10 meilleurs temps s’affichent à l’écran.
 
 ## Pour utiliser l'image Docker
 L'image est disponible sur le docker hub https://hub.docker.com/repository/docker/sofyprd/memorygame
 
-récupérer le fichier docker-compose.yml ci-dessus et exécuter la commande dans le repertoire où il se trouve :
+Récupérer le fichier docker-compose.yml ci-dessus et exécuter la commande dans le repertoire où il se trouve :
 ```code
 $ docker-compose up
 ```
@@ -39,7 +40,7 @@ NodeJS, NPM, MongoDB pour la base de données
 ```code
 $ git clone https://github.com/Sofy-Prd/memory.git
 ```
-- créer un .env à la racine avec pour contenu
+- Créer un .env à la racine avec pour contenu
 ```code
 PORT=3000
 MONGODB_URI=mongodb://localhost/memory
@@ -48,7 +49,7 @@ MONGODB_URI=mongodb://localhost/memory
 ```code
 $ npm intall
 ```
-- démarrer le serveur (assurez-vous que votre base de données mongoDB soit bien démarrée)
+- Démarrer le serveur (assurez-vous que votre base de données mongoDB soit bien démarrée)
 ```code
 $ npm start
 ```
