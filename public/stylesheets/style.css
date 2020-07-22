@@ -53,12 +53,12 @@ h1 {
     font-size: 1.1em; }
 
 #homepage a {
-  text-decoration: inherit;
+  text-decoration: none;
   color: inherit;
   display: inline-block;
   margin-top: 1vh;
   background: #f9f7d0;
-  color: black;
+  font-weight: bold;
   padding: 1em;
   border-radius: .5em; }
 
