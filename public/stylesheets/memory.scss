@@ -24,6 +24,22 @@
   .card .back.blocked {
     pointer-events: none;
   }
+
+  @media (max-width:500px){
+    #memory_board {
+      width: 80vw;
+      height:65vh;
+      padding:9vw;
+    }
+
+    .card .back {
+      width:18vw;
+      height:8vh;
+      margin:1vw;
+      padding:0;
+      background-size: cover;
+     }
+  }
     
   h1 {
     font-size: 3em;
@@ -38,6 +54,17 @@
     font-size: 1.2em;
     text-align: center;
     color:$creme-color;
+  }
+
+  @media (max-width:500px){
+    h1 { 
+      font-size: 2.2em;
+    }
+
+    p {
+      font-size: 1em;
+      width:100vw;
+    }
   }
 
   .progressbar {
