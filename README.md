@@ -3,7 +3,7 @@ Site déployé sur heroku et accessible à l'adresse https://memory-oclock.herok
 
 ## Règles du jeu
 
-Au commencement du jeu, des cartes sont disposées face cachée à l'écran de manière aléatoire.
+Au commencement du jeu, des cartes sont disposées de manière aléatoire face cachée à l'écran.
 - Le joueur doit cliquer sur deux cartes. Si celles-ci sont identiques, la paire est
 validée. Sinon, les cartes sont retournées face cachée, et le joueur doit sélectionner
 une nouvelle paire de cartes.
@@ -14,26 +14,21 @@ plateau.
 Avant le début du jeu, les 10 meilleurs temps s’affichent à l’écran.
 
 ## Pour utiliser l'image Docker
-L'image est disponible sur le docker hub https://hub.docker.com/repository/docker/sofyprd/memorygame
-
-Récupérer le fichier docker-compose.yml ci-dessus et exécuter la commande dans le repertoire où il se trouve :
+Récupérer le fichier docker-compose.yml ci-dessus et exécuter la commande dans le répertoire où il se trouve :
 ```code
 $ docker-compose up
 ```
-
-Docker chargera l'image du site ainsi que celle de mongoDB
+Docker chargera l'image du site ainsi que celle de mongoDB sur dockerhub (https://hub.docker.com/repository/docker/sofyprd/memorygame)
 Une fois que les images sont "runnées" le site est accessible à l'adresse http://localhost:3000
 
 ## Coté front
-Html, CSS et JS
-
-SASS a été utilisé pour le CSS
-
-Handlebars pour les vues
+Html, CSS et JS  
+SASS a été utilisé pour le CSS  
+Handlebars pour les vues  
 
 ## Coté Back
 ### Pré-requis
-NodeJS, NPM, MongoDB pour la base de données
+NodeJS, MongoDB pour la base de données
 
 ### Intallation locale du projet
 - Cloner le projet
@@ -53,9 +48,11 @@ $ npm intall
 ```code
 $ npm start
 ```
+le site est accessible à l'adresse http://localhost:3000
 
 ## Evolutions prévues
 - Faire le responsive
+- Faire de jolies modales à la place du alert et du prompt
 - Mettre en place un système d'authentification avec une gestion des profils des joueurs
 - Créer des niveaux de difficulté
 - Sécuriser les données pour ne pas qu'il soit possible de "tricher" en passant par l'inspecteur
