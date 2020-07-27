@@ -23,7 +23,7 @@ Une fois que les images sont "runnées" le site est accessible à l'adresse http
 
 ## Coté front
 Html, CSS et JS  
-SASS a été utilisé pour le CSS  
+SASS a été utilisé pour le CSS, le site est responsive
 Handlebars pour les vues  
 
 ## Coté Back
@@ -51,7 +51,6 @@ $ npm start
 le site est accessible à l'adresse http://localhost:3000
 
 ## Evolutions prévues
-- Faire le responsive
 - Faire de jolies modales à la place du alert et du prompt
 - Mettre en place un système d'authentification avec une gestion des profils des joueurs
 - Créer des niveaux de difficulté
@@ -61,6 +60,7 @@ le site est accessible à l'adresse http://localhost:3000
 
 ## Aperçu du jeu
 ![alt text](/public/images/screenshotForReadMe.png)
+![alt text](/public/images/screenshotMobileForReadMe.png)
 
 
 
